@@ -1,0 +1,47 @@
+﻿<Window x:Class="WPF_05.Main1"
+        x:Name="Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_05"
+        mc:Ignorable="d"
+        Title="Программа №5" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <DockPanel LastChildFill="False">
+            <Menu DockPanel.Dock="Top" Height="24" Width="Auto" ToolTip="Меню с опциями для взаимодействия">
+                <MenuItem Header="Опции" Height="24" x:Name="itemOptions" MouseEnter="Element_MouseEnter" ToolTip="Вкладка Опции">
+                    <MenuItem Header="Красный" x:Name="itemRed" Click="MenuColorRed" MouseEnter="Element_MouseEnter" ToolTip="Изменить фон на Красный цвет" />
+                    <MenuItem Header="Синий" x:Name="itemBlue" Click="MenuColorBlue" MouseEnter="Element_MouseEnter" ToolTip="Изменить фон на Синий цвет" />
+                    <MenuItem Header="Зеленый" x:Name="itemGreen" Click="MenuColorGreen" MouseEnter="Element_MouseEnter" ToolTip="Изменить фон на Зеленый цвет" />
+                    <Separator />
+                    <MenuItem Header="Закрыть" x:Name="itemClose" Click="Menu_Close" MouseEnter="Element_MouseEnter" ToolTip="Закрыть приложение" />
+                </MenuItem>
+                <MenuItem Header="Об разработчике" x:Name="itemInfoDeveloper" Click="GetDeveloperInfo" MouseEnter="Element_MouseEnter" ToolTip="Информация о разработчике" />
+            </Menu>
+            <ToolBar DockPanel.Dock="Top" Height="63" Width="800">
+                <Button x:Name="ButtonRed" Click="MenuColorRed" MouseEnter="Element_MouseEnter" ToolTip="Изменить фон на Красный цвет">
+                    <Image Source="https://catherineasquithgallery.com/uploads/posts/2021-02/1612890067_59-p-krasnii-odnotonnii-fon-64.jpg" Height="39" Width="72"/>
+                </Button>
+                <Separator />
+                <Button x:Name="ButtonBlue" Click="MenuColorBlue" MouseEnter="Element_MouseEnter" ToolTip="Изменить фон на Синий цвет">
+                    <Image Source="https://img1.akspic.ru/attachments/originals/9/9/1/9/0/109199-nebo-elektrik-atmosfera-sinij-lazurnyj-3000x2250.jpg" Height="37" Width="72"/>
+                </Button>
+                <Separator />
+                <Button x:Name="ButtonGreen" Click="MenuColorGreen" MouseEnter="Element_MouseEnter" ToolTip="Изменить фон на Зеленый цвет">
+                    <Image Source="https://gagaru.club/uploads/posts/2023-05/1685117237_gagaru-club-p-zelenii-tsvet-odnotonnii-krasivo-4.jpg" Height="41" Width="72"/>
+                </Button>
+                <Separator />
+                <Button x:Name="ButtonClose" Click="Menu_Close" MouseEnter="Element_MouseEnter" ToolTip="Закрыть приложение">
+                    <Image Source="https://img2.freepng.ru/20180620/uc/kisspng-computer-icons-login-download-logout-5b2a945b3f9fa6.0903132515295171472606.jpg" Height="41" Width="72"/>
+                </Button>
+            </ToolBar>
+            <StatusBar DockPanel.Dock="Bottom" Width="Auto">
+                <TextBlock x:Name="stateInfo" Text="Пользователь выбрал: " MouseEnter="Element_MouseEnter" />
+                <StatusBarItem HorizontalAlignment="Right" Margin="0,0,15,0" >
+                    <TextBlock x:Name="objectInfo" Text="Вы навелись на объект: " MouseEnter="Element_MouseEnter" />
+                </StatusBarItem>
+            </StatusBar>
+        </DockPanel>
+    </Grid>
+</Window>
